@@ -23,7 +23,7 @@ This material has been collected from multiple sites. I highly recommend visitin
 8. Basic Dynamic Programming
 9. Naive String Searching
 10. O(n logn) Sorting
-11. Binary Searching
+11. Linear and Binary Searching
 
 ### Questions
 
@@ -65,6 +65,9 @@ This material has been collected from multiple sites. I highly recommend visitin
 24. What type of an array is a binary search suitable for, what about a linear search?
 25. How do you determine the value of a base-2 logarithmic function? ex: log2(32);
 26. You have an array containing the prime numbers from 2 to 311 in sorted order: [2, 3, 5, 7, 11, 13, ..., 307, 311]. There are 64 items in the array. About how many items of the array would binary search have to examine before concluding that 52 is not in the array, and therefore not prime?
+27. What is linear time called?
+28. How would you describe the running time of `6n^2 + 100n + 300`?
+29. When using big-O notation we're saying we've used an **Asymptotically tight bound** on the running time. What does this mean?
 
 ### Answers
 
@@ -72,7 +75,7 @@ This material has been collected from multiple sites. I highly recommend visitin
 
 1. Time complexity is the expense in time for a computational program to execute. By using appropriate algorithms, an engineer can shorten the time required to solve operations. This is especially important in programs of scale where thousands of operations may be expected to run over the lifetime of a programs operation, if every process can be reduced even by a few milliseconds the total time required can be drastically shortened. To drive the point home, a simple calculation may take 115 days with one approach, but a mere 1.5 minutes for another algorithmic approach ( `O(n)` vs. `O(sqrt(n))`).
 2. A prime number is a number that is divisible only by **two** numbers, one and itself. Ex: 2, 3, 5, 7, 11, 100003.
-3. `BigO notation` is a simplified analysis of an algorithms efficiency with complexity in terms of input size: N. It is a machine-independent analysis (spec of the computer don't matter), and instead focuses on computer steps to analyze both time and space.
+3. `BigO notation` is a simplified analysis of an algorithms efficiency with complexity in terms of input size: N. It is a machine-independent analysis (spec of the computer don't matter), and instead focuses on computer steps to analyze both time and space. We use bigO or big-theta notation to determine the upper and lower bounds of a computational process to determine its time and memory cost.
 4. Worst-case, average-case, best-case. BigO typically looks at the worst-case, because the worst-case algorithm dominates the entire run time process.
 5. Ignore constants, certain terms "dominate" others (ignore low-order terms, see answer 6).
 6. `O(1) < O(logn) < O(nlogn) < O(n^2) < O(2^n) < O(n1)`
@@ -104,7 +107,7 @@ for x in range (0,n):
 10. `Line 1:` Constant time O(1), `Line 2:` Linear time O(n), `Lines 4, 5:` Quadratic time O(n^2). The nested for loop dominates here, thus **the dominate defining complexity is O(n^2), or quadratic time.**
 11. Constants are irrelevant in BigO notation. For instance, it doesn't matter where the constant is `3n^2` or `5n^2`, we simply care about the `n^2`.
 12. Write out the problem, determine the potential solutions (algorithms) to the problem, and consider each algorithms cost in time and memory.
-13. ========
+13. The process of comparing the size of the input against the rate of growth of the running time while dropping the irrelevant coefficient constants and less significant terms. `xn^2` will always eventually outgrow `yn + z`;
 14. An algorithm is a set of steps followed to accomplish a task. Correctness (optional) and Efficiency. Sometimes the approach needed to correctly solve something may be unavoidably long, the next best option is to find the best solution that solves the problem in the shortest amount of time. In some cases, good is good enough.
 15. Computer scientists use a technic called `Asymptotic Analysis`, or a form of measurement that ignores the specific implementations of a sample (hardware specs, language efficiency, etc). This allows algorithms to be compared independently of programming language or hardware, so that we can conclusively determine which algorithms are more efficient than others.
 16. If given a series of numbers, (1, 16), the computer chooses one number from the pool. Guessing the correct number by incrementing from 1, 2, 3, and so on, is an example of a linear search. Average amount of guesses will be 8, or half the size of the pool.
@@ -118,6 +121,9 @@ for x in range (0,n):
 24. A binary search is suitable for sorted arrays, a linear search is suitable for unsorted arrays.
 25. Divide the number by half until you reach the value 1, the final count determines the log value. `32 / 2 = 16 (1), 16 / 2 = 8 (2), 8 / 2 = 4 (3), 4 / 2 = 2 (4), 2 / 2 = 1 (5)`
 26. 7 times. 6 times as a result of the log, plus once more to confirm the location.
+27. "big-Theta of n" or "Theta of n."
+28. `BigO(n^2)`. We don't care about the constants or lower-order terms (n), instead we focus on the most expensive part of the function the n^2.
+29. "Asymptotically" because it matters on for large values of `n`, "Tight bound" because we've determined the running time within constant factor above and below.
 
 ---
 
