@@ -1,4 +1,4 @@
-# Algorithms and Coffee
+# Algorithm Soup
 
 This material has been collected from multiple sites. I highly recommend visiting the sites for additional information and resources.
 
