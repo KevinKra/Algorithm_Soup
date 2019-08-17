@@ -47,6 +47,12 @@ This material has been collected from multiple sites. I highly recommend visitin
     print x * y;
 ```
 
+11. What does it mean to not care about constants?
+12. What is the general (interview appropriate) approach to solving a computational problem?
+13. What is `Asymptotic notation`?
+14. What is an algorithm, and what are two important considerations regarding an algorithm?
+15. How is algorithm efficiency measured?
+
 ### Answers
 
 > Do not look over these notes while practicing the questions. Doing so will only hinder your learning and serve as a crutch that wont be available during interviews.
@@ -83,6 +89,11 @@ for x in range (0,n):
 ```
 
 10. `Line 1:` Constant time O(1), `Line 2:` Linear time O(n), `Lines 4, 5:` Quadratic time O(n^2). The nested for loop dominates here, thus **the dominate defining complexity is O(n^2), or quadratic time.**
+11. Constants are irrelevant in BigO notation. For instance, it doesn't matter where the constant is `3n^2` or `5n^2`, we simply care about the `n^2`.
+12. Write out the problem, determine the potential solutions (algorithms) to the problem, and consider each algorithms cost in time and memory.
+13. ========
+14. An algorithm is a set of steps followed to accomplish a task. Correctness (optional) and Efficiency. Sometimes the approach needed to correctly solve something may be unavoidably long, the next best option is to find the best solution that solves the problem in the shortest amount of time. In some cases, good is good enough.
+15. Computer scientists use a technic called `Asymptotic Analysis`, or a form of measurement that ignores the specific implementations of a sample (hardware specs, language efficiency, etc). This allows algorithms to be compared independently of programming language or hardware, so that we can conclusively determine which algorithms are more efficient than others.
 
 ---
 
@@ -91,4 +102,4 @@ for x in range (0,n):
 [](#resources)
 
 [CodeChef](https://www.codechef.com/certification/data-structures-and-algorithms/prepare#foundation) - the foundation of this readme.
-`
+[KhanAcademy](https://www.khanacademy.org/computing/computer-science/algorithms#intro-to-algorithms) - Algorithm overview.
