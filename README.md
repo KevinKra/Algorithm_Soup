@@ -68,6 +68,11 @@ This material has been collected from multiple sites. I highly recommend visitin
 27. What is linear time called?
 28. How would you describe the running time of `6n^2 + 100n + 300`?
 29. When using big-O notation we're saying we've used an **Asymptotically tight bound** on the running time. What does this mean?
+30. Order these from fastest growth to slowest: n^2.5, n^2, n, log2n, 1
+31. `(3/2)^2`, `1`, `(3/2)n`, `2n^3`, `2^n`, `3n^2`, `1000`, `3n`; which of these functions is constant, linear, polynomial, exponential?
+32. Write an example of each function type and order them based on their growth from fastest growth to lowest.
+33. Which linearithmic function grows faster? `n log2 n` or `n log6 n` ?
+34. Which logarithmic function grows faster? `log2n` or `log8n` ?
 
 ### Answers
 
@@ -78,7 +83,7 @@ This material has been collected from multiple sites. I highly recommend visitin
 3. `BigO notation` is a simplified analysis of an algorithms efficiency with complexity in terms of input size: N. It is a machine-independent analysis (spec of the computer don't matter), and instead focuses on computer steps to analyze both time and space. We use bigO or big-theta notation to determine the upper and lower bounds of a computational process to determine its time and memory cost.
 4. Worst-case, average-case, best-case. BigO typically looks at the worst-case, because the worst-case algorithm dominates the entire run time process.
 5. Ignore constants, certain terms "dominate" others (ignore low-order terms, see answer 6).
-6. `O(1) < O(logn) < O(nlogn) < O(n^2) < O(2^n) < O(n1)`
+6. Fastest `O(1) < O(log2n) < O(n) < O(nlog2n) < O(n^2) < O(n^2log2n) < O(n^3) < O(2n) < O(n!)` Slowest
 7. `O(1)` "Big O of one". `x = 5 + (15 * 20);`. Independent of input size, N.
 8. Linear time example:
 
@@ -124,6 +129,11 @@ for x in range (0,n):
 27. "big-Theta of n" or "Theta of n."
 28. `BigO(n^2)`. We don't care about the constants or lower-order terms (n), instead we focus on the most expensive part of the function the n^2.
 29. "Asymptotically" because it matters on for large values of `n`, "Tight bound" because we've determined the running time within constant factor above and below.
+30. They are already in order.
+31. `Constant:` 1, 1000, `Linear:` 3n, (3/2)n, `Polynomial:` 3n^2, 2n^3, `Exponential:` (3/2)^n, 2^2.
+32. order: constant, linear, polynomial, exponential.
+33. Linearithmic: The lesser the base, the more quickly it grows. `n log2 n` will grow faster than `n log6 n`.
+34. Logarithmic: The lesser the base, the more quickly it grows.
 
 ---
 
